@@ -17,8 +17,11 @@ Pod::Spec.new do |s|
   s.public_header_files = 'Classes/**/*.h'
   s.static_framework = true
   s.dependency 'Flutter'
-  s.dependency 'FBSDKCoreKit'
-  s.dependency 'FBAudienceNetwork'
+  # Pin to known working versions of Meta (Facebook) SDKs. Update these when the upstream SDKs are updated.
+  # FBSDKCoreKit version: 18.0.2 (see https://github.com/facebook/facebook-ios-sdk/releases)
+  # FBAudienceNetwork version: 6.21.0 (see https://cocoapods.org/pods/FBAudienceNetwork)
+  s.dependency 'FBSDKCoreKit', '18.0.2'
+  s.dependency 'FBAudienceNetwork', '6.21.0'
   s.platform = :ios, '12.0'
 
   # Flutter.framework does not contain a i386 slice.

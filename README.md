@@ -9,7 +9,11 @@
 
 `flutter_meta_sdk` allows you to integration Flutter with Native Meta SDK.
 
-This was created using the latest SDK to include support for iOS 14. The plugin currently supports app events and deeps links for iOS and Android. 
+This plugin uses Meta (Facebook) SDKs for iOS and Android.
+Current plugin-tested versions:
+- Android: com.facebook.android:facebook-android-sdk:18.1.3
+- iOS: FBSDKCoreKit 18.0.2 and FBAudienceNetwork 6.21.0
+The plugin currently supports app events and deep links for iOS and Android.
 
 ## Setting things up
 First of all, if you don't have one already, you must first create an app at Facebook developers: https://developers.facebook.com/
@@ -103,3 +107,10 @@ question to [StackOverflow](https://stackoverflow.com/search?q=flutter+meta+sdk)
 
 Feel free to open a thread if you are having any questions on how to use either the Facebook SDK as a reporting tool
 itself or even on how to use this plugin. 
+
+### Updating iOS example pods
+If you updated the plugin version, run the following inside the `example/ios` folder to refresh the CocoaPods lockfile with the pinned SDK versions from the plugin's podspec:
+
+```bash
+cd example/ios; pod install
+```
